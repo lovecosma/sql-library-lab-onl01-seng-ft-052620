@@ -33,8 +33,8 @@ def select_name_and_series_subgenres_of_authors
   <<-SQL
   SELECT author.name, subgenres.name
   FROM authors
-  JOIN subgenres   
-  ON
+  JOIN subgenres
+  ON 
   ORDER BY LENGTH(characters.motto) DESC
   LIMIT 1;
   SQL
