@@ -53,7 +53,7 @@ def select_series_title_with_most_human_characters
   WHERE characters.species = "Human"
   GROUP BY series.title
   GROUP BY COUNT(characters.species) DESC
-  
+
   SQL
 end
 
