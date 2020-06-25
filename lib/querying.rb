@@ -52,7 +52,7 @@ def select_series_title_with_most_human_characters
   ON characters.id  = character_books.id
   WHERE characters.species = "Human"
   GROUP BY series.title
-  GROUP BY COUNT(characters.species) DESC
+  ORDER BY COUNT(characters.species) DESC
 
   SQL
 end
