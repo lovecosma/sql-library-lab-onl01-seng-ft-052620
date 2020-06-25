@@ -42,7 +42,7 @@ end
 
 def select_series_title_with_most_human_characters
   <<-SQL
-  SELECT series.title 
+  SELECT series.title
   WHERE characters 
   SQL
 end
