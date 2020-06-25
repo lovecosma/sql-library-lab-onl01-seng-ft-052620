@@ -31,7 +31,7 @@ end
 
 def select_name_and_series_subgenres_of_authors
   <<-SQL
-  SELECT authors.name, subgenre.name
+  SELECT authors.name, subgenres.name
   FROM authors
   JOIN series
   ON authors.id = series.author_id
