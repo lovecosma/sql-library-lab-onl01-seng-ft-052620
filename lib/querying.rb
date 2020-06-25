@@ -43,7 +43,9 @@ end
 def select_series_title_with_most_human_characters
   <<-SQL
   SELECT series.title
-  WEHERE MAX(COUNT(characters.species = "Human" ))
+  FROM series
+  JOIN characters
+  ON characters.species = "human"
   SQL
 end
 
