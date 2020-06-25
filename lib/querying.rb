@@ -48,6 +48,8 @@ def select_series_title_with_most_human_characters
   ON series.id = books.series_id
   JOIN character_books
   ON character_books.book_id = books.id
+  JOIN characters
+  ON characters.id  = character_books.id
   SQL
 end
 
