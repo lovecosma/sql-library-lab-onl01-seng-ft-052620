@@ -35,6 +35,7 @@ def select_name_and_series_subgenres_of_authors
   FROM authors
   JOIN subgenres
   ON authors.id = series.author_id
+  WHERE serires.subgenre_id
   ORDER BY LENGTH(characters.motto) DESC
   LIMIT 1;
   SQL
